@@ -1,0 +1,12 @@
+appointments.frame <- data.frame(institution = c("Indiana University School of Education-Indianapolis at IUPUI",
+                                              "Fairmont State University School of Education",
+                                              "University of California-Berkeley/Lawrence Hall of Science",
+                                              "Center for Applied Special Technologies (CAST)",
+                                              "Natural History Museum of Los Angeles County"),
+                              degree = c("Assistant Professor of Technology, Innovation, and Pedagogy in Urban Education",
+                                         "Assistant Professor of Teacher Education",
+                                         "Postdoctoral Scholar",
+                                         "Educational Media Specialist",
+                                         "Educational Technology Coordinator"),
+                              year = c("2016-Present", "2013-2016", "2012-2013",
+                                       "2003-2007", "2000-2002"))

@@ -1,30 +1,170 @@
 ---
-title: "Standard Dynamic CV"
-author: "Jeremy Price"
-date: "3/3/2021"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+library(fontawesome)
+library(readr)
+library(dplyr)
+library(tidyr)
+
+process.frame <- function(data.frame) {
+  # data.frame <- data.frame[order(data.frame$end, na.last = FALSE, decreasing = TRUE), ]
+  data.frame <- data.frame %>% arrange(!is.na(end), end, award)
+  data.frame$start <- as.character(data.frame$start)
+  data.frame$end <- as.character(data.frame$end)
+  data.frame$end <- data.frame$end %>% replace_na("Present")
+  data.frame$date <- if_else(data.frame$start != data.frame$end,
+                             paste(data.frame$start, "-", data.frame$end),
+                             data.frame$start)
+  data.frame <- data.frame %>% select(-start, -end)
+}
 ```
 
-## R Markdown
+<style>
+  body {
+    font-family: Spectral;
+    font-size: 12pt;
+    color: #191919;
+    }
+  .myTable td {
+    padding: 0.25em;
+    font-family: Spectral;
+    vertical-align: top;
+  }
+  .straightTable {
+    padding-left: 1.75em;
+  }
+  .straightTable td {
+    padding: 0.25em;
+    font-family: Spectral;
+    vertical-align: top;
+  }
+  h2 {
+    color: #990000;
+    font-size: 11pt;
+    font-family: "Public Sans";
+    font-weight: normal;
+    text-align: right;
+  }
+  .content {
+    width: 100%;
+    margin: 0px auto;
+    padding-top: 0.25em;
+    overflow: auto;
+  }
+   .content .leftcol {
+    float: left;
+    width: 15%;
+  }
+  .content .rightcol {
+    float: right;
+    width: 85%;
+    padding-top: 0.6em;
+  }
+  .heading {
+    width: 100%;
+    margin: 0px auto;
+    padding-top: 0.25em;
+    overflow: auto;
+    font-size: 10pt;
+    border-bottom: solid 2px #990000;
+  }
+h1 {
+    font-size: 3em;
+    text-align: right;
+  }
+  .heading .leftcol {
+    float: left;
+    width: 65%;
+    text-align: right;
+  }
+  .heading .rightcol {
+    float: right;
+    width: 35%;
+    text-align: right;
+  }
+  .heading a {
+    color: #191919;
+    font-family: 'JetBrains Mono NL';
+    font-size: 9pt;
+  }
+</style>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<div class="heading">
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+<h1> Jeremy Forest Price, PhD </h1>
 
-```{r cars}
-summary(cars)
+<div class="leftcol">
+  Department of Urban Teacher Education<br />
+  IU School of Education-Indianapolis at IUPUI<br />
+  902 West New York Street<br />
+  Indianapolis, IN 46206
+</div>
+<div class="rightcol">
+  1.317.274.6808 `r fa("phone", fill = "#990000")` <br />
+  <a href="mailto:jfprice@iupui.edu">jfprice@iupui.edu</a> `r fa("envelope", fill = "#990000")` <br />
+  <a href="">dr_jfprice</a> `r fa("twitter", fill = "#990000")` <br />
+  <a href="">jfprice</a> `r fa("github-alt", fill = "#990000")` 
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>education</h2>
+</div>
+
+<div class="rightcol">
+```{r education, warning = FALSE}
+source("education.R")
+education.table <- kbl(education.frame, col.names = NULL, label = NULL, table.attr='class="myTable"') %>%
+  pack_rows("Graduate", 1, 3, label_row_css = "border-bottom: 0 px; font-style: italic;") %>%
+  pack_rows("Undergraduate", 4, 4, label_row_css = "border-bottom: 0 px; font-style: italic; padding-top: 0.5em;") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "42%") %>%
+  column_spec(3, width = "14%")
+education.table
 ```
+</div>
+</div>
 
-## Including Plots
+<div class="content">
+<div class="leftcol">
+  <h2>appointments</h2>
+</div>
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+<div class="rightcol">
+```{r appointments, warning = FALSE}
+source("appointments.R")
+appointments.table <- kbl(appointments.frame, col.names = NULL, label = NULL, table.attr='class="myTable"', align = "llr") %>%
+  pack_rows("Academic", 1, 3, label_row_css = "border-bottom: 0 px; font-style: italic;") %>%
+  pack_rows("Non-Academic", 4, 5, label_row_css = "border-bottom: 0 px; font-style: italic; padding-top: 0.5em;") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "42%") %>%
+  column_spec(3, width = "14%")
+appointments.table
 ```
+</div>
+</div>
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<div class="content">
+<div class="leftcol">
+  <h2>awards and honors</h2>
+</div>
+
+<div class="rightcol">
+```{r awards, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
