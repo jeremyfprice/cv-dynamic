@@ -1,0 +1,174 @@
+{
+    "grants": [
+        {
+            "institution": "Indiana Department of Education",
+            "title": "Indiana Governors Emergency Education Relief Grant",
+            "role": "PI",
+            "amount": 1179000,
+            "start_year": "2020",
+            "end_year": "2022",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Institute for Integrative AI",
+            "title": "Collaborative Research Grant",
+            "role": "PI",
+            "amount": 17000,
+            "start_year": "2021",
+            "end_year": "2022",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI School of Education",
+            "title": "Block Grant for Doctoral Student Graduate Assistantship Funding",
+            "role": "PI",
+            "amount": 30000,
+            "start_year": "2020",
+            "end_year": "2021",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Office of the Vice Chancellor for Research",
+            "title": "Developing Community Types Based on School-Centered Antisemitic Incidents",
+            "role": "PI",
+            "amount": 35000,
+            "start_year": "2019",
+            "end_year": "2020",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IU Consortium for the Study of Religion, Ethics, and Society",
+            "title": "Effects and Echoes: The Impacts of White Nationalism on Religious Communities",
+            "role": "PI",
+            "amount": 6000,
+            "start_year": "2019",
+            "end_year": "2020",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Office of International Affairs",
+            "title": "A Comparative Analysis between the US and Hungary (Understanding the Indiana Community)",
+            "role": "PI",
+            "amount": 2000,
+            "start_year": "2019",
+            "end_year": "2019",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Office of the Vice Chancellor for Research",
+            "title": "Facing Ourselves, Facing Our Students: Contemplative Pedagogies and Approaches for Exploring the Thorny Issues of Race and Religion with Teachers in Predominantly White Christian Suburban Schools",
+            "role": "PI",
+            "amount": 35000,
+            "start_year": "2018",
+            "end_year": "2019",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Program Review and Assessment Committee",
+            "title": "Evaluating the Cross-Curricular Integration of Technology in IUPUI's Urban-Focused Teacher Education Program",
+            "role": "PI",
+            "amount": 5000,
+            "start_year": "2018",
+            "end_year": "2019",
+            "aspect": "service",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI 50th Anniversary Fund",
+            "title": "Reclaiming the New Colossus: From the MS Saint Louis to Contemporary Times",
+            "role": "PI",
+            "amount": 2500,
+            "start_year": "2018",
+            "end_year": "2019",
+            "aspect": "service",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Office of International Affairs",
+            "title": "Partnership Building with Western Galilee College and Northern Israel",
+            "role": "PI",
+            "amount": 2300,
+            "start_year": "2018",
+            "end_year": "2018",
+            "aspect": "service",
+            "status": "funded"
+        },
+        {
+            "institution": "Leonard and Marion Freeman Charitable Fund",
+            "title": "Strengthening IUPUI's Jewish Community Through New Traditions",
+            "role": "PI",
+            "amount": 800,
+            "start_year": "2017",
+            "end_year": "2018",
+            "aspect": "service",
+            "status": "funded"
+        },
+        {
+            "institution": "IU School of Education",
+            "title": "Building Peace and Justice through Critical Inquiries of Place with Technology",
+            "role": "PI",
+            "amount": 18000,
+            "start_year": "2017",
+            "end_year": "2018",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI Curriculum Enhancement Grant",
+            "title": "Upgrading the Online and Hybrid Learning to Teach with Technology Course to Support Justice-, Equity- and Inclusion-Oriented Teacher Preparation",
+            "role": "PI",
+            "amount": 5000,
+            "start_year": "2017",
+            "end_year": "2018",
+            "aspect": "teaching",
+            "status": "funded"
+        },
+        {
+            "institution": "IUPUI School of Education",
+            "title": "Block Grant for Doctoral Student Graduate Assistantship Funding",
+            "role": "PI",
+            "amount": 30000,
+            "start_year": "2017",
+            "end_year": "2018",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "Claude Worthington Benedum Foundation",
+            "title": "Fostering a Network of Science Inquiry-Focused Schools with the EnergyMakers Curriculum",
+            "role": "PI",
+            "amount": 107000,
+            "start_year": "2015",
+            "end_year": "2016",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "Fairmont State University Foundation",
+            "title": "Foundation Grant",
+            "role": "PI",
+            "amount": 2500,
+            "start_year": "2013",
+            "end_year": "2014",
+            "aspect": "research",
+            "status": "funded"
+        },
+        {
+            "institution": "Lynch School of Education at Boston College",
+            "title": "Summer Dissertation Grant",
+            "role": "PI",
+            "amount": 1500,
+            "start_year": "2011",
+            "end_year": "2011",
+            "aspect": "research",
+            "status": "funded"
+        }
+    ]
+}

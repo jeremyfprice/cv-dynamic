@@ -1,0 +1,112 @@
+body {
+    font-family: Spectral;
+    font-size: 1.1em;
+    color: #191919;
+    margin-left: 26%;
+    margin-right: 26%;
+}
+.column {
+    float: left;
+    margin-bottom: 0.15em;
+}
+
+.left,
+.middle {
+    width: 39%;
+    margin-right: 2%
+}
+
+.right {
+    width: 14%;
+    text-align: right;
+}
+.row {
+    margin-bottom: 0.4em;
+}
+.item {
+    margin-bottom: 0.1em;
+    padding-left: 2em;
+    text-indent: -2em;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.straightTable {
+    padding-left: 1.75em;
+}
+.straightTable td {
+    padding: 0.25em;
+    font-family: Spectral;
+    vertical-align: top;
+}
+h2 {
+    color: #990000;
+    font-size: 0.9em;
+    font-family: "Public Sans";
+    font-weight: 500;
+    text-align: left;
+}
+h3 {
+    font-size: 1.1em;
+    font-family: Spectral;
+    font-style: italic;
+    font-weight: 400;
+    padding: 0;
+    margin: 1em 0 0;
+}
+h3.top {
+    font-size: 1.1em;
+    font-family: Spectral;
+    font-style: italic;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+.content {
+    width: 100%;
+    margin: 1em auto;
+    padding-top: 0.25em;
+    overflow: auto;
+}
+.content .leftcol {
+    float: left;
+    width: 16%;
+    margin-right: 3%;
+}
+.content .rightcol {
+    float: right;
+    width: 81%;
+    padding-top: 0.55em;
+}
+.heading {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0.25em;
+    overflow: auto;
+    font-size: 10pt;
+    border-bottom: solid 2px #990000;
+}
+h1 {
+    font-size: 3em;
+    text-align: right;
+    font-weight: 500;
+    margin: 0;
+}
+.heading .leftcol {
+    float: left;
+    width: 65%;
+    text-align: right;
+}
+.heading .rightcol {
+    float: right;
+    width: 35%;
+    text-align: right;
+}
+.heading a {
+    color: #191919;
+    font-family: 'JetBrains Mono NL';
+    font-size: 9pt;
+    text-decoration: none;
+}

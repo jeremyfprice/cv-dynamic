@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Dynamic CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/cv-standard.css" />
+<body>
+    <div class="heading">
+        <h1> Jeremy Forest Price, PhD </h1>
+
+        <div class="leftcol">
+            Department of Urban Teacher Education<br />
+            IU School of Education-Indianapolis at IUPUI<br />
+            902 West New York Street<br />
+            Indianapolis, IN 46206
+        </div>
+        <div class="rightcol">
+            1.317.274.6808 <i class="fa fa-phone" style = "color: #990000;")></i><br />
+            <a href="mailto:jfprice@iupui.edu">jfprice@iupui.edu</a> <i class="fa fa-envelope" style = "color: #990000;")></i><br />
+            <a href="https://twitter.com/dr_jfprice">dr_jfprice</a> <i class="fa fa-twitter" style = "color: #990000;")></i><br />
+            <a href="https://github.com/jeremyfprice">jfprice</a> <i class="fa fa-github-alt" style = "color: #990000;")></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>education</h2>
+        </div>
+        <div class="rightcol">
+            <h3 class="top">Graduate</h3>
+            {% for item in education | selectattr('level', '==', 'graduate') | sort(attribute = 'year', reverse = True) %}
+            <div class="item">
+                {{ item.degree }}, {{ item.institution }}, {{ item.year }}
+            </div>
+            {% endfor %}
+
+            <h3>Undergraduate</h3>
+            {% for item in education | selectattr('level', '==', 'undergraduate') | sort(attribute = 'year', reverse = True) %}
+            <div class="item">
+                {{ item.degree }}, {{ item.institution }}, {{ item.year }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>appointments</h2>
+        </div>
+        <div class="rightcol">
+            <h3 class="top">Academic</h3>
+            {% for item in appointments | selectattr('type', '==', 'academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Non-Academic</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>awards and honors</h2>
+        </div>
+        <div class="rightcol">
+            {% for item in awards | sort(attribute = 'title') | sort(attribute = 'start_year', reverse = True) | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.title }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>grants</h2>
+        </div>
+        <div class="rightcol">
+            {% for item in grants | sort(attribute = 'title') | sort(attribute = 'start_year', reverse = True) | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.institution }}, "{{ item.title }}," {{ item.role }},
+                ${{- '{:,}'.format(item.amount) -}}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>publications</h2>
+        </div>
+        <div class="rightcol">
+            <h3 class="top">Book Chapters</h3>
+            {% for item in appointments | selectattr('type', '==', 'academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Journal Articles</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>White Papers and Policy Documents</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Op-Eds</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Digital Media</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>refereed presentations</h2>
+        </div>
+        <div class="rightcol">
+            {% for item in grants | sort(attribute = 'title') | sort(attribute = 'start_year', reverse = True) | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.institution }}, "{{ item.title }}," {{ item.role }},
+                ${{- '{:,}'.format(item.amount) -}}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>select invited presentations</h2>
+        </div>
+        <div class="rightcol">
+            {% for item in grants | sort(attribute = 'title') | sort(attribute = 'start_year', reverse = True) | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.institution }}, "{{ item.title }}," {{ item.role }},
+                ${{- '{:,}'.format(item.amount) -}}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="leftcol">
+        <h2>leadership and service</h2>
+        </div>
+        <div class="rightcol">
+            <h3 class="top">Book Chapters</h3>
+            {% for item in appointments | selectattr('type', '==', 'academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Journal Articles</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>White Papers and Policy Documents</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Op-Eds</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+
+            <h3>Digital Media</h3>
+            {% for item in appointments | selectattr('type', '==', 'non-academic') | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.position }}, {{ item.institution }}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+   <div class="content">
+        <div class="leftcol">
+        <h2>media coverage</h2>
+        </div>
+        <div class="rightcol">
+            {% for item in grants | sort(attribute = 'title') | sort(attribute = 'start_year', reverse = True) | sort(attribute = 'end_year', reverse = True) %}
+            <div class="item">
+                {{ item.institution }}, "{{ item.title }}," {{ item.role }},
+                ${{- '{:,}'.format(item.amount) -}}, {{ item.start_year }}{%- if item.start_year != item.end_year -%}&nbsp;- {{ item.end_year }}{%- endif -%}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

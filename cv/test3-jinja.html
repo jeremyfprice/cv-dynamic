@@ -1,0 +1,604 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\documentclass[11pt,article,oneside]{memoir}   
+\usepackage{org-preamble-xelatex}
+\usepackage{fontawesome5,url}
+\usepackage{fontspec}
+\usepackage[TU]{fontenc}
+%\usepackage[default,oldstyle]{sourcesanspro}
+%\usepackage[default]{sourceserifpro}
+%\usepackage[default]{sourcecodepro}
+%\usepackage[default]{sourcesanspro}
+%\usepackage{url}
+
+
+
+
+
+
+
+\def\myauthor{Jeremy F Price}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{IU School of Education-Indianapolis at IUPUI}
+\def\myaddress{Urban Teacher Education}
+\def\myemail{jfprice@iupui.edu}
+\def\myweb{jeremyfprice.github.io}
+\def\myphone{1.317.274.6808}
+\def\myfax{}
+\def\mytwitter{@dr\_jfprice}
+\def\myversion{}
+\def\myrevision{}
+
+
+\def\myaffiliation{IU School of Education-Indianapolis at IUPUI}
+\def\myauthor{Jeremy F Price}
+\date{} % not used (revision control instead)
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+
+
+
+
+%\setmainfont{sourceserifpro}
+%\setsansfont[Colour=AA0000]{sourcesanspro}
+%\setmonofont[Mapping=tex-text,Scale=0.72]{Source Code Pro} 
+
+%\fontspec{Source Sans Pro}
+
+\setmainfont{Spectral}
+
+\setsansfont[Colour=990000]{Public Sans}
+
+\setmonofont[Scale=0.77]{SauceCodePro Nerd Font}
+
+\newfontface\addressblock{Spectral}
+\newfontface\scheader[SmallCapsFont={Spectral},SmallCapsFeatures={Letters=SmallCaps}]{Spectral}
+
+%\setmonofont{PT Mono}
+
+%\newfontface\scheader[SmallCapsFont={Spectral},SmallCapsFeatures={Letters=SmallCaps}]{Spectral}
+
+%\setsansfont{Source Sans Pro}\selectfont
+
+%\newfontface\addressblock{SauceCodePro Nerd Font}
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+
+
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+
+\renewcommand{\labelitemi}{~} 
+
+
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+
+
+
+
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+%\pagestyle{kjh}
+%\thispagestyle{kjhgit}
+
+
+
+
+
+\begin{minipage}[t]{2.95in}
+ \flushright {\footnotesize 
+ Department of Urban Teacher Education,\\ IU School of Education-Indianapolis at IUPUI,\\ 902 West New York Street,\\ Indianapolis, IN 46026}  
+  
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.3in}
+  \flushright \footnotesize  \addressblock \myphone \, \faPhone \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe} \\
+  {\scriptsize  \texttt{\href{http://twitter.com/dr_jfprice}{\mytwitter}} \, \faTwitter } 
+\end{minipage}
+
+\medskip
+
+
+\noindent{\LARGE\scheader \textsc{jeremy f price}}
+\reversemarginpar
+
+\bigskip
+
+
+
+\marginhead{\sffamily education}
+
+\noindent\emph{Graduate \vspace{0.01in}}
+
+    {% for item in education | selectattr('level', 'eq', 'graduate') | sort(attribute = 'year', reverse = True) %}
+        \ind {{ item.degree }}, {{ item.institution }}, {{ item.year }}
+    {% endfor %}
+
+\bigskip
+
+\noindent\emph{Undergraduate \vspace{0.01in}}
+
+\ind BA, Cultural Anthropology, Brandeis University, 1995
+
+ \bigskip
+
+
+\marginhead{\sffamily {\vskip -1em}  appointments}
+\medskip
+\noindent\emph{Academic \vspace{0.01in}}
+
+\ind Assistant Professor of Technology, Innovation, and Pedagogy in Urban Education,  Indiana University School of Education-Indianapolis at IUPUI, 2016--Present
+
+\ind Assistant Professor of Teacher Education, Fairmont State University, 2013--2016
+
+\ind Postdoctoral Scholar, Lawrence Hall of Science/University of California-Berkeley, 2012-2013
+
+\bigskip
+
+\noindent\emph{Non-Academic \vspace{0.01in}}
+
+\ind Digital Media Specialist, CAST (Center for Applied Special Technologies), 2003-2007
+
+\ind Education Technology Coordinator, Natural History Museum of Los Angeles County, 2000-2002
+
+\bigskip
+
+
+\marginhead{\sffamily honors and \newline awards}
+\medskip
+
+\ind Faculty Research Fellow, The Center for the Study of Religion \& American Culture at IUPUI, 2019-Present
+
+\ind Grant Improvement through Faculty Training Fellow, Office of the Vice Chancellor of Research at IUPUI, 2019-Present
+
+\ind Open Education Resources Award, IUPUI University Library, 2019
+
+\ind Intercultural Engagement Teaching Fellow, IUPUI Gateway Community of Practice on Intercultural Learning, 2019
+
+\ind Mosaic Teaching Fellow, IU Mosaic Active Teaching Program, 2017-2018
+
+\ind Division K (Teacher Education) New Faculty Fellow, American Education Research Association, 2014
+
+\ind CADRE Fellow, Community for Advancing Discovery Research in Education of the National Science Foundation, 2011-2012
+
+\bigskip
+
+
+\marginhead{\sffamily grants}
+\medskip
+
+\ind Indiana Department of Education, "Indiana Governor's Emergency Education Relief Grant," PI, \$1,179,000, 2020-21
+
+\ind IUPUI Institute for Integrative AI, "Collaborative Research Grant," PI, \$17,000, 2020-21
+
+\ind IUPUI School of Education, "Block Grant for Doctoral Student Graduate Assistantship Funding," PI, 2020-2021
+
+\ind IUPUI Office of the Vice Chancellor for Research, "Developing Community Types Based on School-Centered Antisemitic Incidents," PI, \$35,000, 2019-2021
+
+\ind IU Consortium for the Study of Religion, Ethics, and Society, "Effects and Echoes: The Impacts of White Nationalism on Religious Communities," PI, \$6000, 2019-20
+
+\ind IUPUI Office of International Affairs, "A Comparative Analysis between the US and Hungary (Understanding the Indiana Community)," PI, \$2000, 2019
+
+\ind IUPUI Office of the Vice Chancellor for Research, "Facing Ourselves, Facing Our Students: Contemplative Pedagogies and Approaches for Exploring the Thorny Issues of Race and Religion with Teachers in Predominantly White Christian Suburban Schools," PI, \$35,000, 2018-2019
+
+\ind IUPUI Program Review and Assessment Committee, "Evaluating the Cross-Curricular Integration of Technology in IUPUI’s Urban-Focused Teacher Education Program," PI, \$5000, 2018-2019
+
+\ind IUPUI 50th Anniversary Fund, "Reclaiming the New Colossus: From the MS Saint Louis to Contemporary Times,"	PI, \$2500, 2018-2019
+
+\ind IUPUI Office of International Affairs, "Partnership Building with Western Galilee College and Northern Israel," PI, \$2300, 2018
+
+\ind Leonard and Marion Freeman Charitable Fund, "Strengthening IUPUI’s Jewish Community Through New Traditions,"	PI, \$800, 2017-2018
+
+\ind IU School of Education, "Building Peace and Justice through Critical Inquiries of Place with Technology," PI, \$18,000, 2017-2018
+
+\ind IUPUI Curriculum Enhancement Grant, "Upgrading the Online and Hybrid Learning to Teach with Technology Course to Support Justice-, Equity- and Inclusion-Oriented Teacher Preparation," PI, \$5000, 2017-2018
+
+\ind IUPUI School of Education, "Block Grant for Doctoral Student Graduate Assistantship Funding," PI, 2017-2018
+
+\ind Claude Worthington Benedum Foundation, "Fostering a Network of Science Inquiry-Focused Schools with the EnergyMakers Curriculum," PI, \$107,000, 2015-2016
+
+\ind Fairmont State University Foundation, "Foundation Grant," PI, \$2500, 2013-2014
+
+\ind Lynch School of Education at Boston College, "Summer Dissertation Grant," \$1500, 2011
+
+
+\bigskip
+
+
+\marginhead{\sffamily {\vskip 0.35em} publications}
+\medskip
+\noindent\emph{Book Chapters \vspace{0.01in}}
+
+\ind Price, J. F. (In Press). Stumbling to Reclaim Humanity in the Face of Antisemitism in the Classroom. In V. Stead (Ed.), \textit{Confronting Campus Antisemitism}. New York: Peter Lang.
+
+\ind Magee, P., Willey, C., Ceran, E., Price, J. F., \& Cervantes Barrera, J. (2020). The Affordances and Challenges of Enacting Culturally Relevant STEM Pedagogy. In Johnson, C., Mohr-Schroeder, M., Moore, T., \& English, L. \textit{Handbook of STEM Research} (pp. 300-311). New York: Routledge.
+
+\ind Félix, A., Khaja, K., Price, J. F. (2020). White Nationalism. \textit{Social Workers' Desk Reference}, 4th Ed.
+
+\ind Price, J. F. (2017). Understandings the Meanings Secondary Biology Students Construct Around Science Through Drawings. In P. Katz (Ed.), \textit{Drawing Conclusions: Drawings as Data in Science Education}. Rotterdam, The Netherlands: Sense.
+
+\ind Price, J. F. (2017). Using Contemplative Pedagogies to Explore Diversity Within and Beyond One’s Experience in Pre-Service Teacher Education. In K. Byrnes, J. Dalton, \& E. H. Dorman (Eds.), \textit{Cultivating a Culture of Learning: Contemplative Practices, Pedagogy, and Research in Education}. Rowman \& Littlefield: Lanham, MD.
+
+\ind Price, J. F., Johnson, M., \& Barnett, M. (2012). Universal Design for Learning (UDL) in the Science Classroom. In T.E. Hall, D.H. Rose, \& A. Meyer (Eds.), \textit{Universal design for learning}. New York: Guilford.
+
+\bigskip
+\noindent\emph{Journal Articles \vspace{0.05in}}
+
+\ind Lindstrom, D., Jones, G., *Price, J. F. (accepted with minor revisions). Can you picture this? Preservice teachers’ drawings and pedagogical beliefs about teaching with technology. \textit{Contemporary Issues of Technology in Teacher Education}.
+
+\ind Price, J. F. (in process). Orienting Technology in Education for Social Justice.
+
+\ind Price, J. F., Silverman, E. H. (in process). Addressing School-based Antisemitism.
+
+\ind Price, J. F., Nguyen, H. K., Whitehead, A. (in process). Revisiting Christian Privilege and Normativity in Public School in the Age of Nationalism and Dominionism.
+
+\ind Price, J. F. (in process). Teacher Identities Entangling the Act of Confronting Race and Religion in the Classroom.
+
+\ind Price, J. F. \& McNeill, K. L. (2013). Searching for a lived science curriculum in intersecting figured worlds: An exploration of meaning in science education. \textit{Journal of Research in Science Teaching}, 50(5), 501-529.
+
+\ind Price, J. F., Pimentel, D.S., McNeill, K. L., Strauss, E. G., \& Barnett, M. (2011). Ways of knowing science in the 21st century: More than just the facts. \textit{The Science Teacher}, 78(7), 36-41.
+
+\ind Laing, F., Brown, D., Price, J., Teeger, S., \& Wong, M. (1997). Intradecidual Sign: Is It Effective in Diagnosis of an Early Intrauterine Pregnancy? \textit{Radiology}, 204, 655-660.
+
+\bigskip
+\noindent\emph{White Papers and Policy Documents \vspace{0.05in}}
+
+\ind Price, J. F. (2017). Report on Community Focus Group around Draft 2 of the ISTE Standards for Teachers. Report for the International Society for Technology in Education (ISTE). Eugene, OR.
+
+\ind Reich, C., Price, J. F., Rubin, E., \& Steiner, M. A. (2010). Inclusion and Informal Science Education. Report for the Center for Advancement of Informal Science Education (CAISE). Washington, D.C.
+
+\bigskip
+\noindent\emph{Op-Eds \vspace{0.05in}}
+
+\ind Price, J. F., \& Silverman, E. H. (2019). \href{https://forward.com/opinion/426018/combatting-anti-semitism-in-the-classroom-should-not-fall-to-jews/}{Combatting Anti-Semitism In The Classroom Should Not Fall To Jews}. \textit{Jewish Forward}.
+
+\bigskip
+\noindent\emph{Digital Media \vspace{0.05in}}
+
+\ind Price, J. F. (2020). 4chan and \#OperationPridefall. \href{https://twitter.com/dr\_jfprice/status/1265658344133591041}{https://twitter.com/dr\_jfprice/ \newline status/1265658344133591041} (568,105 impressions, 3,600 likes, 2,900 retweets)
+
+\ind Price, J. F. (2020). Recognizing Fake Jewish Social Media Accounts Designed to Sow Discord. \href{https://twitter.com/dr\_jfprice/status/1213914984549437440}{https://twitter.com/dr\_jfprice/status/1213914984549437440} (1,034,415 impressions, 2,933 likes, 1,711 retweets)
+
+\ind Price, J. F. (2019). Rabbi's Watch Cat Bot for Responding to Antisemitic Twitter Posts. \href{https://cheapbotsdonequick.com/source/RabbisWatchCat}{https://cheapbotsdonequick.com/source/RabbisWatchCat}
+
+\ind Price, J. F. (2018). Using Students’ Illustrations to Understand Classroom Dynamics in Mosaic Classrooms – Mosaic Initiative. \href{https://blogs.iu.edu/mosaiciu/2018/03/05/price\_student-illustrations/}{https://blogs.iu.edu/\newline mosaiciu/2018/03/05/price\_student-illustrations/}
+
+
+\newpage
+
+
+
+\marginhead{\sffamily refereed \newline presentations}
+
+\ind Price, J. F. (2020, November 3-5). A Spiral Approach to Partner-Based Online Discussions Over Time in Online Courses. Innovative Learning Summit. Online.
+
+\ind Nguyen, D. H. K., Price, J. F., \& Silverman, E. H. (2020, October 28-November 1). Legality of granting academic credit for religious instruction: Implications of Christian normative practices in public schools. American Educational Studies Association Annual Conference, San Antonio, TX (Conference Cancelled).
+
+\ind Price, J. F., Magee, P., Santamaría Graff, C., Hall, T., Cervantes Barrera, J., Foote, R., \& Snorten, C. (2020, October 26-28). A Framework for Sustainable Culturally Relevant and Inclusive Teaching During Remote and Hybrid Learning. Society for Information Technology in Teacher Education Interactive Conference, Online.
+
+\ind Price, J. F., Santamaría Graff, C., Hall, T., Cervantes Barrera, J., Foote, R., \& Snorten, C. (2020, October 26-28). Technology as a Bridge to Co-Create Environments for Equity and Inclusion in Education. Society for Information Technology in Teacher Education Interactive Conference, Online.
+
+\ind Price, J. F., \& Silverman, E. H. (2020, April 17-21). Understanding Reactions and Responses by Community Stakeholders to Public Incidences of Antisemitism in Schools. Annual meeting of the American Educational Research Association, San Francisco, CA (Conference Cancelled).
+
+\ind Price, J. F., Manlove, J., Siddeeq, K., \& Carr, K. (2019). Asking the Right Questions: Stumbling Through Contemplative Pedagogies in Research. Paper presented at the annual meeting of the Association of Contemplative Mind in Higher Education, Amherst, MA.
+
+\ind Nguyen, H.K., \& Price, J. F. (2019). Reviving the Debate: The Constitutionality of Granting Academic Credit for Religious Instruction in Public Schools. Paper presented at the annual meeting of the Education Law Association, Norfolk, VA.
+
+\ind Price, J. F. (2019). Contemplative Reading: Community-Engagement \& Social Justice. Paper presented at the annual meeting of the Association of Contemplative Mind in Higher Education, Amherst, MA.
+
+\ind Evans, R., \& Price, J. F. (2019). Retooling Our Approach Online for Students with Disabilities with Universal Design for Learning. Paper presented at the annual conference of Indiana University Online, Indianapolis, IN.
+
+\ind Price, J. F. (2019). Engaging in Mindful and Culturally Relevant Teacher Preparation with Technology. Paper presented at the annual meeting of the Society for Information Technology and Teacher Education, Las Vegas, NV.
+
+\ind Price, J. F. (2019). Checking for Understanding and Building a Culture of Reflection with Digital Technologies. Paper presented at Plater Institute on the Future of Learning: Indiana Digital Learning Summit. Indianapolis, IN.
+
+\ind Price, J. F., Manlove, J., \& Morgan, Z. (2018). Mapping the Field of Research on Learning to Teach with Technology: A Review of the Literature. Paper presented at the annual meeting of the American Educational Research Association, New York, NY.
+
+\ind Price, J. F. (2018). Ritual as Pedagogical Practice in Online Teaching and Learning. Paper presented at the annual conference of Indiana University Online, Indianapolis, IN.
+
+\ind Price, J. F., \& Keller, D. (2018). Contemplative Reading. Paper presented at the annual meeting of the Association of Contemplative Mind in Higher Education, Amherst, MA.
+
+\ind Price, J. F. (2017). Engaging with Open Educational Resources Inside and Outside of Canvas. Paper Presented at CanvasCon IUPUI, Indianapolis, IN.
+
+\ind Price, J. F. (2017). You Found the Resources, Now What? Tools for Supporting Students’ Critical Engagement with OERs. Invited Presentation at \#GoOpen Regional Conference (US Department of Education), Warren Township Public School District, Indianapolis, IN.
+
+\ind Price, J. F., Lindstrom, D. L., Kent, M., Hayhurst, A., Snell, J., Aggarwal, A., Aggarwal, N., \& Fieldson, S. (2016, February). It Takes a Village to Support STEM Teaching Practices: Building an Online STEM-Focused Teacher Community of Practice. Presentation at the West Virginia Professional Development Schools Conference, Flatwoods, WV.
+
+\ind Price, J. F., Hewitt, A. M. (2015). What Teaching with Technology Looks Like for Undergraduate Teacher Candidates: Understanding Imagined Practices of Teaching. Paper presented at the annual meeting of the American Educational Research Association, Chicago, IL.
+
+\ind Price, J. F. (2015). Contemplative Practices for Exploring Diversity Within and Beyond One’s Experience. Paper presented at the annual meeting of the Association of Contemplative Mind in Higher Education, Washington, DC.
+
+\ind Lindstrom, D. L., Price, J. F. (2015). Using VoiceThread to Facilitate Dialogue and Teacher Development. Paper presented at the West Virginia Professional Development Schools Conference, Flatwoods, WV.
+
+\ind Loper, S., McNeill, K. L., Peck, P., Price, J. F., \& Barber, J. (2014). Multimedia educative curriculum materials: Designing digital supports for learning to teach scientific argumentation. Paper presented at the International Conference of the Learning Sciences, Boulder, CO.
+
+\ind Price, J. F., \& Barber, J. (2014). What Students See: Understanding The Impact Of One-To-One Tablets Through Student Drawings. Paper presented at the annual meeting of the American Educational Research Association, Philadelphia, PA.
+
+\ind Price, J. F. (2014). Understandings the Meanings Secondary Biology Students Construct Around Science From Drawings. Paper presented at the annual meeting of the National Association for Research in Science Teaching, Pittsburgh, PA.
+
+\ind Price, J.F., Loper, S., Barber, J., \& McNeill, K.L. (2013). Negotiating Tensions in Designing Multimedia Educative Curriculum Materials. Paper presented at the annual meeting of the American Educational Research Association, San Francisco, CA. 
+
+\ind McNeill, K. L., Katsh-Singer, R., Gonzalez-Howard, M., Price, J. F., \& Loper, S. (2013). Factors that Impact Teachers’ Argumentation Instruction in their Classroom. Paper presented at the annual meeting of the American Educational Research Association, San Francisco, CA. 
+
+\ind Price, J. F., Barber, J., Corrigan, S., Tilson, J., Billman, A., \& Loper, S. (2013). Engagement and the Middle School Science Curriculum. Paper presented at the annual meeting of the National Association for Research in Science Teaching, Rio Grande, Puerto Rico. 
+
+\ind McNeill, K. L., Gonzalez-Howard, M. Katsh-Singer, R., Price, J. F. \& Loper, S. (2013). Teachers’ beliefs and practices around argumentation during a curriculum enactment. Paper presented at the annual meeting of the National Association for Research in Science Teaching, Rio Grande, Puerto Rico.
+
+\ind Price, J. F. \& McNeill, K. L. (2009). Reflecting on the urban ecology curriculum: Engaging students and teachers in dialogue and hermeneutics with technology. Paper presented at annual meeting of the New England Educational Research Organization, Portsmouth, NH. 
+
+\ind Price, J. F. (2009). Education In Encounter: In Dialogue With Martin Buber On Education. Paper presented at the Boston College Department of Philosophy Conference On Education, Chestnut Hill, MA. 
+
+\ind Price, J. F. (2008). Claims and Warrants in the Research on Teaching with Technology. Presentation at the New England Educational Research Organization. Hyannis, MA.
+
+\newpage
+
+
+
+\marginhead{\sffamily select invited \newline presentations}
+
+\ind Instructional Design and the Digital Education Hub, Digital Education Hub Teacher Network Series, Online, 16 March 2021
+
+\ind A Discussion About Being Jewish, International School of Indianapolis Diversity Talk, Online, 2 March 2021
+
+\ind A Conversation on the Black and Jewish Communities and a Quest for Wholeness, Student-Organized Panel Discussion, Online, 24 September 2020
+
+\ind HIPs to What Ends? Integrating Civic Learning into Online and Hybrid Courses, IEL Series at IUPUI, Online, 30 July 2020
+
+\ind Meeting the Needs of All Students During COVID-19, Midwest and Plains Equity Center Virtual World Café Series, 22 June 2020
+
+\ind Roots and Resistance: Uneasy Relationships between White Nationalism and Christianity, Indiana University Consortium for the Study of Religion, Ethics, and Society, Indianapolis, IN, 17 February 2020
+
+\ind Organizing for Equity through Religious Communities, Hamilton Southeastern School Corporation Equity Panel, Fishers, IN, 14 November 2019
+
+\ind Jewish Podcast Talks on Jewish Identity and American Culture, Jewish Federation of Greater Indianapolis, Indianapolis, IN, November 2019
+
+\ind Deconstructing the Mountains: Christian Normativity and Whiteness in Policy, Professions, and Education, Indiana University Consortium for the Study of Religion, Ethics, and Society, Indianapolis, IN, 14 October 2019
+
+\ind Understanding Midwest Antisemitism in Context, Jewish Federation of Greater Dayton (OH) and the Jewish Agency for Israel, Dayton, OH, 12 September 2019
+
+\ind Growing Hate: The Impacts of White Nationalism on Communities in Central Indiana, Indiana University Consortium for the Study of Religion, Ethics, and Society, Indianapolis, IN, 3 September 2019
+
+\ind What We Know About Suburban Middle School Teachers and Their Approaches to Diversity and Equity, Hamilton Southeastern School Corporation Diversity and Equity Committee, Fishers, IN, 29 August 2019
+
+\ind Understanding Contemplative Approaches to Teaching and Learning, Lander Center for Educational Research, Touro College Graduate School of Education, Online, 10 April 2019
+
+\ind \#ShowUpForShabbat \textit{Hesped} (Eulogy) for the Victims of the Tree of Life Synagogue Shooting, Congregation Beth-El Zeddick, Indianapolis, IN, 2 November 2018
+
+\ind \textit{Hesped} (Eulogy) for the Victims of the Tree of Life Synagogue Shooting, Indianapolis Hebrew Congregation and Interfaith Indiana, Indianapolis, IN, 29 October 2018
+
+\ind Being Jewish in School and "Soft" Antisemitism, Indianapolis Jewish Community Relations Council, Indianapolis, IN, 10 October 2018
+
+\ind Understanding the Ins and Outs of Antisemitism, Indianapolis Jewish Community Relations Council, Indianapolis, IN, 10 October 2018
+
+\ind On Beyond Accessibility: Designing Courses for Equity and Inclusion with Universal Design for Learning, Indiana Instructional Design Colloquium, Indiana, IN, 12 April 2018
+
+\ind Introducing Urban Education: Recognizing Cultural Tapestries in Israeli Educational Systems, Western Galilee College, Akko, Israel, 20 June 2018
+
+\ind Critical Conversations: Teaching Contested Narratives, IUPUI Office of Intercultural Literacy, Capacity and Engagement, Indianapolis, IN, 7 February 2018
+
+\ind Critical Conversations: Talking Religion on Campus	IUPUI Office of Intercultural Literacy, Capacity and Engagement, Indianapolis, IN, 6 December 2017
+
+\ind Bringing Machshavah to Machshevim: A Mindful Approach to Technology in Jewish Education (Keynote Address),	National Association of Temple Educators, Seattle, WA, 2 February 2011
+
+\ind Linked In: Evolution or Revolution? (Keynote Address with Ari Kelman), National Association of Temple Educators, Seattle, WA, 30 January 2011
+
+
+\marginhead{\sffamily {\vskip 0.6em} leadership \newline and service}
+\medskip
+
+\noindent\emph{Public Engagement \vspace{0.01in}}
+
+\ind School- and Corporation-Based Listening Sessions to Understand the Challenges and Opportunities of Remote Learning During COVID-19, Convener/Facilitator, 2020
+
+\ind After- and Out-of-School Education Organization-Based Listening Sessions to Understand the Challenges and Opportunities of Remote Learning During COVID-19, Convener/Facilitator, 2020
+
+\ind Western States Center White Nationalist Toolkit for Schools, Media Contact, 2019-Present
+
+\ind Federal Bureau of Investigation, Consultant on White Nationalism, 2019-Present
+
+\ind Bloomington (IN) City Farmers Market, Consultant on White Nationalism, 2019
+
+\ind Central Indiana Antisemitism Symposium Planning Committee, Member, 2018
+
+\ind Indianapolis Black-Jewish Partnership, Urban League and Jewish Community Relations Council, Steering Committee Member and Participant, 2017-2020
+
+\medskip
+
+\noindent\emph{Professional Leadership and Service \vspace{0.01in}}
+
+\ind Critical Educational Technology Scholars Alliance, Activism and Community Engagement Chair, 2021-Present
+
+\ind Shofar: An Interdisciplinary Journal of Jewish Studies, Reviewer, 2021-Present
+
+\ind Journal of Digital Learning and Teacher Education, Reviewer, 2013-Present
+
+\ind Journal of Research on Science Education, Reviewer, 2012-Present
+
+\ind American Educational Research Association Annual Meeting, Reviewer, 2012-Present
+
+\ind National Association for Research on Science Teaching, Reviewer, 2012-2014
+
+\ind International Society for Technology in Education (ISTE) Standards for Teachers Redesign, Consultant for 
+Diversity, Equity, Inclusion, and Urban Community Engagement, 2016-2017
+
+\ind Complicity: An International Journal of Complexity and Education, Reviewer, 2010-Present
+
+
+\medskip
+
+\noindent\emph{School and University Leadership and Service \vspace{0.01in}}
+
+\ind IUPUI Office of International Affairs Curriculum Internationalization Committee, Member, 2020-Present
+
+\ind IUPUI Chancellor’s Interfaith Inclusion Task Force, Member, 2019-2020
+
+\ind IU School of Education-Indianapolis at IUPUI Teacher Education Student Learning Contract Drafting Task Force, Member, 2018-2021
+
+\ind IU School of Education-Indianapolis at IUPUI, Faculty Development and Advancement Committee, Member, 2018-Present
+
+\ind IUPUI Bias, Hate, and Extremism Task Force of the Chancellor’s Diversity Cabinet, Member, 2018-2020
+
+\ind IUPUI Chancellor’s Diversity Cabinet, Member, 2018-2020
+
+\ind Hamilton Southeastern School Corporation Relationship-Building	Liaison, 2018-2020
+
+\ind IUPUI Civic Literacy and Engagement Task Force, Member, 2018-2019
+
+\ind IU School of Education-Indianapolis at IUPUI, Counseling Tenure Track and Clinical Faculty Search Committee, Member, 2018-2019
+
+\ind IU School of Education-Indianapolis at IUPUI Leadership Council, Member, 2018-2019
+
+\ind IU School of Education-Indianapolis at IUPUI, Graduate Studies Committee, Member, 2018-2019
+
+\ind IUPUI Office of International Affairs Campus Council, Representative, 2017-Present
+
+\ind IU School of Education-Indianapolis at IUPUI Technology Specialized Improvement Plan for CAEP Re-Accreditation, Coordinator, 2017-Present
+
+\ind IUPUI Distance Education Committee, Member, 2017-Present
+
+\ind IUPUI Jewish Student Association, Faculty Advisor, 2017-2020
+
+\ind IUPUI Interreligious Dialogue Group, Convener and Co-Facilitator, 2017
+
+\ind IU Online Learning and Teaching with Technology Masters Degree Collaborative Committee, IUPUI Representative, 2016-Present
+
+\ind IUPUI Jewish Faculty and Staff Council, Founding Chair, 2017-2020
+
+\ind IUPUI Affinity Groups Council, Member, 2017-2020
+
+\ind IU School of Education-Indianapolis at IUPUI, Technology-Based Benchmark Assessment Items for Student Teachers, Coordinator, 2016-Present
+
+\ind IU School of Education-Indianapolis at IUPUI Counseling Clinical Faculty Search Committee, Member, 2017-2018
+
+\ind IU School of Education-Indianapolis at IUPUI Graduate Program Policy Council, Member, 2016-2018
+
+\ind IU School of Education Core Campus Learning Technologies Committee, Member, 2016-2018
+
+\medskip
+
+\noindent\emph{Professional Memberships \vspace{0.01in}}
+
+\ind Critical Educational Technology Scholars Alliance, 2019-Present
+
+\ind Society for Information Technology in Teacher Education, 2017-Present
+
+\ind Association for Contemplative Mind in Higher Education, 2014-Present
+
+\ind American Education Research Association, 2010-Present
+
+\ind International Society for Technology in Education, 2010-Present
+
+\ind National Association for Research in Science Teaching, 2010-2014
+
+\bigskip 
+
+\marginhead{\sffamily {\vskip 0.6em}media \newline coverage}
+\medskip
+
+\ind Lindsay, J. (2020, September 17). \href{https://indianapublicradio.org/news/2020/09/more-than-60-million-going-to-indiana-schools-for-teacher-training-remote-learning/}{More than \$60 Million Going to Indiana Schools for Teacher Training, Remote Learning} [Radio Broadcast]. NPR.
+
+\ind Sherridan, J., Beam, M., Price, J. F., Wilde, J. (2020, September 16). \href{https://www.wfyi.org/programs/all-in/radio/How-Do-We-Make-Remote-Learning-Better}{How Do We Make Remote Learning Better?} [Radio Broadcast]. NPR.
+
+\ind Doherty, S. (2020, June 3). \href{https://www.vice.com/en/article/7kpbba/operation-pridefall-4chan-gay-pride-2020}{Inside Operation Pridefall: 4chan’s Attempt to Bring Down Pride 2020}. Vice News.
+
+\ind Grossman, D. (2018, October 30). \href{https://www.nuvo.net/news/indianapolis-hebrew-congregation-hosts-memorial/article\_a8535dba-dc02-11e8-8fe3-3b450433c062.html}{Indianapolis Hebrew Congregation Hosts Memorial}. NUVO.
+
+\ind Barrett, C. (2018, October 30). \href{https://www.npr.org/podcasts/500005/npr-news-now}{Communities Rally After Anti-Semitic Pittsburgh Shooting}.
+
+\ind Bull, H. (2018, October 30). \href{https://fox59.com/2018/10/29/indianapolis-memorial-service-honors-11-killed-in-pittsburgh-synagogue-shooting/}{Indianapolis memorial service honors 11 killed in Pittsburgh synagogue shooting}.
+
+\ind Longnecker, E. (2018, October 29). \href{https://www.wthr.com/article/11-lost-pittsburgh-synagogue-shooting-remembered-indianapolis}{11 lost in Pittsburgh synagogue shooting remembered in Indianapolis}.
+
+\ind Hill, C. (2018, October 29). \href{https://www.indystar.com/story/news/2018/10/29/indy-faith-leaders-call-unity-after-pittsburgh-synagogue-shooting/1814436002/}{Indianapolis faith leaders call for unity, vigilance after synagogue shooting}. Indianapolis Star.
+
+\ind Barrett, C. (2018, October 10). \href{https://www.wfyi.org/news/articles/anti-semitism-in-schools-on-the-rise}{Anti-Semitism in Schools on the Rise}.
+
+\ind Wiley, A. (2015, June 23). \href{https://www.timeswv.com/news/fsu-tekids-receive-grant-to-launch-stem-initiative/article\_a40e27f6-1961-11e5-b55b-abc0377fd2ff.html
+}{FSU, TEKids receive grant to launch STEM initiative}. Times West Virginian.
+
+\ind Wiles, S. (2015, June 22). \href{https://wajr.com/fairmont-state-stem-grant-connects-schools-statewide/}{Fairmont State STEM grant connects schools statewide}.
+
+%\medskip
+
+%\bigskip
+\end{document}

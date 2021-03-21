@@ -1,0 +1,60 @@
+{
+  "awards": [
+      {
+          "title": "Open Education Resources Award",
+          "institution": "IUPUI University Library",
+          "start_year": "2019",
+          "end_year": "2019",
+          "aspect": "teaching"
+      },
+      {
+        "title": "Intercultural Engagement Teaching Fellow",
+        "institution": "Gateway Community of Practice on Intercultural Learning",
+        "start_year": "2019",
+        "end_year": "2019",
+        "aspect": "teaching"
+    },
+    {
+        "title": "Mosaic Teaching Fellow",
+        "institution": "IU Mosaic Active Teaching Program",
+        "start_year": "2017",
+        "end_year": "2018",
+        "aspect": "teaching"
+    },
+    {
+        "title": "Mosaic Senior Teaching Fellow",
+        "institution": "IU Mosaic Active Teaching Program",
+        "start_year": "2019",
+        "end_year": "Present",
+        "aspect": "teaching"
+    },
+    {
+        "title": "Faculty Research Fellow",
+        "institution": "The Center for the Student of Religion & American Culture",
+        "start_year": "2019",
+        "end_year": "Present",
+        "aspect": "research"
+    },
+    {
+        "title": "Grant Improvement through Faculty Training (GIFT) Fellow",
+        "institution": "Office of the Vice Chancellor for Research at IUPUI",
+        "start_year": "2019",
+        "end_year": "Present",
+        "aspect": "research"
+    },
+    {
+        "title": "New Faculty Fellow",
+        "institution": "American Education Research Association Division K (Teacher Education)",
+        "start_year": "2014",
+        "end_year": "2014",
+        "aspect": "research"
+    },
+    {
+        "title": "CADRE Fellow",
+        "institution": "Community for Advancing Discovery Research in Education (CADRE) of the National Science Foundation",
+        "start_year": "2011",
+        "end_year": "2012",
+        "aspect": "research"
+    }
+  ]
+}

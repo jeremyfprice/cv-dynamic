@@ -1,0 +1,44 @@
+{
+    "appointments": [
+        {
+            "institution": "Indiana University School of Education-Indianapolis at IUPUI",
+            "location": "Indianapolis, IN",
+            "position": "Assistant Professor of Technology, Innovation, and Pedagogy in Urban Education",
+            "start_year": "2016",
+            "end_year": "Present",
+            "type": "academic"
+        },
+        {
+            "institution": "Fairmont State University School of Education",
+            "location": "Fairmont, WV",
+            "position": "Assistant Professor of Teacher Education",
+            "start_year": "2013",
+            "end_year": "2016",
+            "type": "academic"
+        },
+        {
+            "institution": "University of California-Berkeley/Lawrence Hall of Science",
+            "location": "Berkeley, CA",
+            "position": "Postdoctoral Scholar",
+            "start_year": "2012",
+            "end_year": "2013",
+            "type": "academic"
+        },
+        {
+            "institution": "Center for Applied Special Technologies (CAST)",
+            "location": "Wakefield, MA",
+            "position": "Educational Media Specialist",
+            "start_year": "2003",
+            "end_year": "2007",
+            "type": "non-academic"
+        },
+        {
+            "institution": "Natural History Museum of Los Angeles County",
+            "location": "Los Angeles, CA",
+            "position": "Educational Technology Coordinator",
+            "start_year": "2000",
+            "end_year": "2002",
+            "type": "non-academic"
+        }
+    ]
+}

@@ -21,6 +21,7 @@ process.frame <- function(data.frame) {
                              data.frame$start)
   data.frame <- data.frame %>% select(-start, -end)
 }
+
 ```
 
 <style>
@@ -30,7 +31,6 @@ process.frame <- function(data.frame) {
     color: #191919;
     }
   .myTable td {
-    padding: 0.25em;
     font-family: Spectral;
     vertical-align: top;
   }
@@ -156,6 +156,126 @@ appointments.table
 
 <div class="rightcol">
 ```{r awards, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>grants</h2>
+</div>
+
+<div class="rightcol">
+```{r grants, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>publications</h2>
+</div>
+
+<div class="rightcol">
+```{r publications, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>refereed presentations</h2>
+</div>
+
+<div class="rightcol">
+```{r refereed, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>invited presentations</h2>
+</div>
+
+<div class="rightcol">
+```{r invited, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>leadership<br />and service</h2>
+</div>
+
+<div class="rightcol">
+```{r service, warning = FALSE, message = FALSE}
+awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  select(-aspect) %>%
+  process.frame()
+
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="straightTable"', align = "llr") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "41%") %>%
+  column_spec(3, width = "18%")
+awards.table
+```
+</div>
+</div>
+
+<div class="content">
+<div class="leftcol">
+  <h2>media coverage</h2>
+</div>
+
+<div class="rightcol">
+```{r media, warning = FALSE, message = FALSE}
 awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
   select(-aspect) %>%
   process.frame()

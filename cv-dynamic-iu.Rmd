@@ -15,7 +15,7 @@ library(tidyr)
 
 process.frame <- function(data.frame) {
   # data.frame <- data.frame[order(data.frame$end, na.last = FALSE, decreasing = TRUE), ]
-  data.frame <- data.frame %>% arrange(!is.na(end), end, award)
+  data.frame <- data.frame %>% arrange(aspect, !is.na(end), end, award)
   data.frame$start <- as.character(data.frame$start)
   data.frame$end <- as.character(data.frame$end)
   data.frame$end <- data.frame$end %>% replace_na("Present")
@@ -24,6 +24,8 @@ process.frame <- function(data.frame) {
                              data.frame$start)
   data.frame <- data.frame %>% select(-start, -end)
 }
+
+target.year <- "2019 - Present"
 ```
 <style>
   body {
@@ -51,8 +53,20 @@ process.frame <- function(data.frame) {
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
+    text-decoration: underline;
   }
   h2::after {
+    content: ":";
+  }
+  h3 {
+    color: #990000;
+    font-size: 1em;
+    font-family: "BentonSans";
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  h3::after {
     content: ":";
   }
   .heading {
@@ -117,3 +131,91 @@ appointments.table <- kbl(appointments.frame, col.names = NULL, label = NULL, ta
 
 appointments.table
 ```
+
+## Professional Memberships
+
+  * blah blah blah
+  * blah blah blah
+  * blah blah blah
+
+## Awards and Honors
+
+```{r awards, warning = FALSE, message = FALSE}
+
+  awards.frame <- read_csv(file = "awards.csv", col_names = TRUE) %>%
+  process.frame()
+  
+
+
+  awards.count <- awards.frame %>% count(aspect)
+  awards.count <- as.data.frame(t(awards.count))
+  colnames(awards.count) <- awards.count[1,]
+  awards.count <- awards.count[-1,]
+  awards.count$service <- ifelse(("service" %in% colnames(awards.count)) == FALSE, 0, awards.count$service)
+  awards.count <- awards.count %>% select(teaching, research, service)
+  teach.end <- as.numeric(awards.count$teaching)
+  research.start <- as.numeric(awards.count$teaching) + 1
+  research.end <- as.numeric(awards.count$research) + as.numeric(awards.count$research)
+
+awards.frame$aspect <- as.factor(awards.frame$aspect)
+awards.frame$aspect <- relevel(awards.frame$aspect, "teaching")
+awards.frame <- awards.frame %>% arrange(desc(aspect), desc(date), award)
+awards.frame <- awards.frame %>% select(-aspect)
+  
+awards.table <- kbl(awards.frame, col.names = NULL, label = NULL, table.attr='class="myTable"', align = "llr") %>%
+  pack_rows("Teaching", 1, teach.end, label_row_css = "border-bottom: 0 px; text-transform: uppercase; font-family: BentonSans;") %>%
+  pack_rows("Research and Scholarship", research.start, research.end, label_row_css = "border-bottom: 0 px; text-transform: uppercase; font-family: BentonSans;") %>%
+  kable_minimal(full_width = TRUE) %>%
+  column_spec(1:2, width = "42%") %>%
+  column_spec(3, width = "14%") %>%
+  row_spec(which(awards.frame$date == target.year), bold = FALSE, background = "#FDF7E7")
+
+awards.table
+```
+
+## Professional Development
+  * blah
+  * blah
+  * blah
+  
+## Teaching
+
+### Teaching Assignments
+  * blah
+  * blah
+  * blah
+
+### Mentoring
+
+### Teaching Administration and Curriculum Development
+
+### Grants/Fellowships in Teaching
+
+### Invited Presentations---Teaching
+
+## Research/Creative Activity
+
+### Grants/Fellowships in Research
+  * blah
+  * blah
+  * blah
+  
+### Invited Presentations---Research
+
+## Service and Leadership
+
+### University Leadership and Service
+
+### Professional and Community Leadership and Service
+
+### Grants/Fellowships in Leadership and Service
+
+## Publications
+
+### Teaching
+
+### Research
+
+### Leadership and Service
+
+## Media Coverage

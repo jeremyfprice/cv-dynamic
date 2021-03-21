@@ -1,0 +1,28 @@
+{
+  "education": [
+    {
+      "institution": "Lynch School of Education, Boston College",
+      "degree": "PhD, Curriculum and Instruction, STEM Education",
+      "year": 2012,
+      "level": "graduate"
+    },
+    {
+      "institution": "Harvard Graduate School of Education",
+      "degree": "EdM, Technology in Education",
+      "year": 2003,
+      "level": "graduate"
+    },
+    {
+      "institution": "Brandeis University",
+      "degree": "Postbaccalaureate Certificate, Premedicine",
+      "year": 1996,
+      "level": "graduate"
+    },
+    {
+      "institution": "Brandeis University",
+      "degree": "BA, Cultural Anthropology",
+      "year": 1995,
+      "level": "undergraduate"
+    }
+  ]
+}
